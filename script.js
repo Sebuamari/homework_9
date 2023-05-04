@@ -91,8 +91,9 @@ console.log(...reversed);
 // ფუნქციის საშუალებით გამოთვალეთ უსერის ასაკი და დაამატეთ შემდეგი პირობა, თუ გადაცემული ასაკი მეტია 18- ზე დააბრუნეთ - სრულლოვანი,
 // თუ ნაკელებია  დააბრუნეთ არასწულწლოვანი. 
 // ეს ამოცანა დაწერეთ arrow function-ით და if ის პირობა ჩაწერეთ ახალი სინტაქსით;
-const getUserInfo = (user) => {
-    return user.age >= 18 ? user.age + ' - სრულწლოვანი' : user.age < 18 ? ' - არასრულწოვანი' : '';
+const getUserAge = (birthYear, currentYear) => {
+    let userAge = currentYear - birthYear;
+    return userAge >= 18 ? userAge + ' - სრულწლოვანი' : userAge < 18 ? ' - არასრულწოვანი' : '';
 };
 
-console.log(getUserInfo(user));
+console.log(getUserAge(1999, 2023));
